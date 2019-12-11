@@ -1,0 +1,52 @@
+# tworzenie tabeli - CREATE TABLE
+
+  CREATE TABLE Heroes (id int, name varchar(25), siblings int);
+
+
+# wstawianie wierszy - INSERT INTO ...() VALUES ()
+
+  INSERT INTO Heroes VALUES (1, 'Harry Potter', 0);
+  (wstawianie bez podawania nazw kolumn)
+
+  INSERT INTO Heroes (id, name, siblings) VALUES (2, 'Ron Weasley', 6);
+
+
+# wybieranie/wyświetlanie danych - SELECT ... FROM ...
+
+  SELECT * FROM Heroes;  (zapytanie wyświetlające wszystkie kolumny)
+
+  SELECT * FROM Categories;
+
+  SELECT name FROM Heroes; (wyświetla konkretne kolumny - "name")
+  SELECT CategoryName, Description FROM Categories; (kilka kolumn)
+
+
+# sortowanie - ORDER BY
+
+  SELECT CategoryName, Description FROM Categories ORDER BY CategoryName DESC;
+  (domyślnie dane sortowane są rosnąco – ASC, można też posortować malejąco – DESC)
+
+
+# klauzula WHERE
+
+  SELECT * FROM Heroes WHERE siblings = 2;
+  (wybiera te wiersze, które zawierają w kolumnie odpowiednią wartość)
+
+  SELECT * FROM Heroes WHERE (id % 2) = 0;
+  (wszystkie postacie, których identyfikator jest parzysty)
+
+
+# operatory AND/OR - wiersze spełniające więcej niż jeden warunek
+
+  (produkty, które są słodyczami (kategoria 3) oraz ich cena jest wyższa niż 40)
+  SELECT * FROM Products WHERE CategoryID = 3;
+  SELECT * FROM Products WHERE Price > 40;
+  SELECT * FROM Products WHERE CategoryID = 3 AND Price > 40; (razem)
+
+
+# operatory IN / BETWEEN / LIKE
+
+  IN – porównuje kolumnę z wieloma możliwymi wartościami. Zwróci wartość true,
+  jeśli uda się dopasować chociaż jedną wartość.
+  BETWEEN – sprawdza, czy wartość mieści się w zadanym zakresie
+  LIKE – wyszukuje określony wzorzec
