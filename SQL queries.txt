@@ -46,7 +46,12 @@
 
 # operatory IN / BETWEEN / LIKE
 
-  IN – porównuje kolumnę z wieloma możliwymi wartościami. Zwróci wartość true,
+  IN (wartość1, wartość2) – porównuje kolumnę z wieloma możliwymi wartościami. Zwróci wartość true,
   jeśli uda się dopasować chociaż jedną wartość.
-  BETWEEN – sprawdza, czy wartość mieści się w zadanym zakresie
+  BETWEEN – sprawdza, czy wartość mieści się w zadanym zakresie (i NOT BETWEEN)
   LIKE – wyszukuje określony wzorzec
+
+  SELECT * FROM Products WHERE CategoryID IN (2,3); (produkty będące przyprawą lub słodyczami)
+  SELECT * FROM Products WHERE Price BETWEEN 20 AND 50; (cena między 20 a 50)
+  SELECT * FROM Products WHERE ProductName LIKE 'Cha%'; (wyrazy rozpoczynające się od "Cha")
+  SELECT * FROM Products WHERE ProductName LIKE '%art%'; (wyrazy mające w środku słowo "art")
