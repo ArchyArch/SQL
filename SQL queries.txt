@@ -55,3 +55,13 @@
   SELECT * FROM Products WHERE Price BETWEEN 20 AND 50; (cena między 20 a 50)
   SELECT * FROM Products WHERE ProductName LIKE 'Cha%'; (wyrazy rozpoczynające się od "Cha")
   SELECT * FROM Products WHERE ProductName LIKE '%art%'; (wyrazy mające w środku słowo "art")
+
+# funkcje
+
+  COUNT() – zlicza liczbę wierszy
+  SUM() – zwraca całkowitą sumę wartości w danej kolumnie liczbowe
+  AVG() – zwraca średnią z wartości
+  MIN() / MAX() – zwraca najmniejszą / największą wartość
+
+  SELECT COUNT(*) FROM Products; (wszystkie produkty w bazie)
+  SELECT MAX(Price) FROM Products; (najdroższy produkt)
