@@ -65,3 +65,13 @@
 
   SELECT COUNT(*) FROM Products; (wszystkie produkty w bazie)
   SELECT MAX(Price) FROM Products; (najdroższy produkt)
+
+# zagnieżdżenia
+
+  SELECT ProductName, Unit FROM Products;
+  SELECT MIN(Price) FROM Products;
+
+  SELECT ProductName, Unit
+  FROM Products
+  WHERE Price = (
+    SELECT MIN(Price) FROM Products);
