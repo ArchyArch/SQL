@@ -75,3 +75,10 @@
   FROM Products
   WHERE Price = (
     SELECT MIN(Price) FROM Products);
+
+# łączenie tabeli
+
+  SELECT Orders.OrderID, Orders.ShipperID, Customers.Country
+  FROM Orders
+  INNER JOIN Customers ON                    (wybranie kolumn z obu tabel)
+  Orders.CustomerID = Customers.CustomerID;
