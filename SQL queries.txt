@@ -87,3 +87,10 @@
   LEFT (OUTER) JOIN – zwraca wszystkie rekordy tabeli po lewej stronie operatora JOIN oraz rekordy dopasowane z prawej tabeli
   RIGHT (OUTER) JOIN – zwraca wszystkie rekordy tabeli po prawej stronie operatora JOIN oraz rekordy dopasowane z lewej tabeli
   FULL (OUTER) JOIN – zwraca wszystkie rekordy, gdy występuje dopasowanie w lewej lub prawej tabeli
+
+# aliasy
+
+  SELECT o.OrderID, o.ShipperID, c.Country
+  FROM Orders AS o                   (AS jest opcjonalne)
+  INNER JOIN Customers AS c
+  ON o.CustomerID = c.CustomerID;
