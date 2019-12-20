@@ -94,3 +94,17 @@
   FROM Orders AS o                   (AS jest opcjonalne)
   INNER JOIN Customers AS c
   ON o.CustomerID = c.CustomerID;
+
+# aktualizowanie danych
+
+  Aby zaktualizować wiersz w tabeli: UPDATE...SET...WHERE
+  - Nazwę tabeli, w której dokonujemy zmian
+  - Nowe wartości w kolumnach
+  - Wiersze, które mają zostać zaktualizowane – wskazane za pomocą klauzuli WHERE
+
+  Jeżeli pominiemy ostatni punkt – wskazanie wierszy do aktualizacji, to zmodyfikujemy wszystkie wiersze w tabeli (!)
+  Chcemy zamienić akronim UK na pełną nazwę:
+
+  UPDATE Customers
+  SET COUNTRY = 'United Kingdom'
+  WHERE Country = 'UK';
