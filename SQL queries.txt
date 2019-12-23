@@ -108,3 +108,8 @@
   UPDATE Customers
   SET COUNTRY = 'United Kingdom'
   WHERE Country = 'UK';
+
+# usuwanie wierszy (DELETE – wybrać odpowiednią tabelę i wiersz)
+
+  DELETE FROM Customers
+  WHERE CustomerID = 2;
