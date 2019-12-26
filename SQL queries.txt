@@ -113,3 +113,9 @@
 
   DELETE FROM Customers
   WHERE CustomerID = 2;
+
+# usuwanie tabeli
+
+  DELETE FROM Heroes; (kiedyś: TRUNCATE TABLE Heroes;)
+
+  DROP TABLE Heroes; (usuwanie całej tabeli i jej śladów)
